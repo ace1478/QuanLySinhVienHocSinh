@@ -8,5 +8,6 @@ namespace QuanLySinhVien_GiaoVien.DTO
 {
     class SinhVien
     {
+        public int MaSV { get; set; }
     }
 }
