@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DAO\SinhVienDAO.cs" />
     <Compile Include="GUI\Form_Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,11 +66,11 @@
     <Compile Include="GUI\Uc_GiaoVien.Designer.cs">
       <DependentUpon>Uc_GiaoVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Uc_SinhVien.cs">
+    <Compile Include="GUI\UC_SinhVien.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GUI\Uc_SinhVien.Designer.cs">
-      <DependentUpon>Uc_SinhVien.cs</DependentUpon>
+    <Compile Include="GUI\UC_SinhVien.designer.cs">
+      <DependentUpon>UC_SinhVien.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -81,8 +83,8 @@
     <EmbeddedResource Include="GUI\Uc_GiaoVien.resx">
       <DependentUpon>Uc_GiaoVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Uc_SinhVien.resx">
-      <DependentUpon>Uc_SinhVien.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\UC_SinhVien.resx">
+      <DependentUpon>UC_SinhVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -117,7 +119,6 @@
     <None Include="Resources\key-4-24.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="DAO\" />
     <Folder Include="DTO\" />
   </ItemGroup>
   <ItemGroup>

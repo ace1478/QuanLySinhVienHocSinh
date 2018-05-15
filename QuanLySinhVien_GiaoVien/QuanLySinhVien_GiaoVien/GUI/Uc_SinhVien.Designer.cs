@@ -1,6 +1,6 @@
-﻿namespace QuanLySinhVien_GiaoVien.GUI
+﻿namespace TNTA.GUI
 {
-    partial class Uc_SinhVien
+    partial class UC_SinhVien
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,6 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.dtgvSinhVien = new System.Windows.Forms.DataGridView();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn_TimKiem = new System.Windows.Forms.Button();
+            this.txb_ChuoiTK = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.cbKhoa = new System.Windows.Forms.ComboBox();
+            this.button8 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.button9 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.lb_ThongBao = new System.Windows.Forms.Label();
             this.lb_MSVcheck = new System.Windows.Forms.Label();
             this.lb_SDTcheck = new System.Windows.Forms.Label();
@@ -36,41 +48,163 @@
             this.dtp_NgaySinh = new System.Windows.Forms.DateTimePicker();
             this.label11 = new System.Windows.Forms.Label();
             this.bt_Exit = new System.Windows.Forms.Button();
-            this.tx_Email = new System.Windows.Forms.TextBox();
-            this.tx_SĐT = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.tx_MSV = new System.Windows.Forms.TextBox();
-            this.tx_Name = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.rdb_Nu = new System.Windows.Forms.RadioButton();
-            this.rdb_Nam = new System.Windows.Forms.RadioButton();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.button9 = new System.Windows.Forms.Button();
-            this.cbKhoa = new System.Windows.Forms.ComboBox();
-            this.button8 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btn_TimKiem = new System.Windows.Forms.Button();
-            this.txb_ChuoiTK = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dtgvSinhVien = new System.Windows.Forms.DataGridView();
             this.bt_delete = new System.Windows.Forms.Button();
             this.bt_huy = new System.Windows.Forms.Button();
             this.bt_Save = new System.Windows.Forms.Button();
             this.bt_Edit = new System.Windows.Forms.Button();
             this.bt_ADD = new System.Windows.Forms.Button();
-            this.panel2.SuspendLayout();
+            this.tx_Email = new System.Windows.Forms.TextBox();
+            this.tx_SĐT = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.rdb_Nu = new System.Windows.Forms.RadioButton();
+            this.rdb_Nam = new System.Windows.Forms.RadioButton();
+            this.label8 = new System.Windows.Forms.Label();
+            this.tx_MSV = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.tx_Name = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvSinhVien)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvSinhVien)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // dtgvSinhVien
+            // 
+            this.dtgvSinhVien.AllowUserToAddRows = false;
+            this.dtgvSinhVien.AllowUserToDeleteRows = false;
+            this.dtgvSinhVien.AllowUserToOrderColumns = true;
+            this.dtgvSinhVien.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtgvSinhVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvSinhVien.Location = new System.Drawing.Point(13, 78);
+            this.dtgvSinhVien.Name = "dtgvSinhVien";
+            this.dtgvSinhVien.ReadOnly = true;
+            this.dtgvSinhVien.Size = new System.Drawing.Size(900, 255);
+            this.dtgvSinhVien.TabIndex = 50;
+            this.dtgvSinhVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvSinhVien_CellClick);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.btn_TimKiem);
+            this.groupBox1.Controls.Add(this.txb_ChuoiTK);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Location = new System.Drawing.Point(13, 3);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(388, 69);
+            this.groupBox1.TabIndex = 54;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Tìm kiếm";
+            // 
+            // btn_TimKiem
+            // 
+            this.btn_TimKiem.Location = new System.Drawing.Point(261, 26);
+            this.btn_TimKiem.Name = "btn_TimKiem";
+            this.btn_TimKiem.Size = new System.Drawing.Size(75, 23);
+            this.btn_TimKiem.TabIndex = 2;
+            this.btn_TimKiem.Text = "Tìm kiếm";
+            this.btn_TimKiem.UseVisualStyleBackColor = true;
+            this.btn_TimKiem.Click += new System.EventHandler(this.btn_TimKiem_Click);
+            // 
+            // txb_ChuoiTK
+            // 
+            this.txb_ChuoiTK.Location = new System.Drawing.Point(80, 27);
+            this.txb_ChuoiTK.Name = "txb_ChuoiTK";
+            this.txb_ChuoiTK.Size = new System.Drawing.Size(165, 20);
+            this.txb_ChuoiTK.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(30, 30);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(54, 13);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Nhập tên ";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.cbKhoa);
+            this.groupBox2.Controls.Add(this.button8);
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Location = new System.Drawing.Point(431, 3);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(396, 69);
+            this.groupBox2.TabIndex = 55;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Tìm kiếm theo khoa";
+            // 
+            // cbKhoa
+            // 
+            this.cbKhoa.FormattingEnabled = true;
+            this.cbKhoa.Location = new System.Drawing.Point(72, 26);
+            this.cbKhoa.Name = "cbKhoa";
+            this.cbKhoa.Size = new System.Drawing.Size(184, 21);
+            this.cbKhoa.TabIndex = 4;
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(273, 24);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(75, 23);
+            this.button8.TabIndex = 2;
+            this.button8.Text = "Tìm kiếm";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 31);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(60, 13);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Chọn Khoa";
+            // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(842, 10);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(71, 60);
+            this.button9.TabIndex = 3;
+            this.button9.Text = "Làm Mới DS";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.lb_ThongBao);
+            this.panel1.Controls.Add(this.lb_MSVcheck);
+            this.panel1.Controls.Add(this.lb_SDTcheck);
+            this.panel1.Controls.Add(this.cb_lop);
+            this.panel1.Controls.Add(this.lop);
+            this.panel1.Controls.Add(this.dtp_NgaySinh);
+            this.panel1.Controls.Add(this.label11);
+            this.panel1.Controls.Add(this.bt_Exit);
+            this.panel1.Controls.Add(this.bt_delete);
+            this.panel1.Controls.Add(this.bt_huy);
+            this.panel1.Controls.Add(this.bt_Save);
+            this.panel1.Controls.Add(this.bt_Edit);
+            this.panel1.Controls.Add(this.bt_ADD);
+            this.panel1.Controls.Add(this.tx_Email);
+            this.panel1.Controls.Add(this.tx_SĐT);
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.tx_MSV);
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.tx_Name);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Location = new System.Drawing.Point(13, 338);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(900, 215);
+            this.panel1.TabIndex = 56;
             // 
             // lb_ThongBao
             // 
@@ -101,6 +235,7 @@
             this.lb_SDTcheck.Size = new System.Drawing.Size(35, 13);
             this.lb_SDTcheck.TabIndex = 31;
             this.lb_SDTcheck.Text = "label5";
+            this.lb_SDTcheck.Click += new System.EventHandler(this.label1_Click);
             // 
             // cb_lop
             // 
@@ -109,6 +244,7 @@
             this.cb_lop.Name = "cb_lop";
             this.cb_lop.Size = new System.Drawing.Size(203, 21);
             this.cb_lop.TabIndex = 6;
+            this.cb_lop.SelectedIndexChanged += new System.EventHandler(this.cb_lop_SelectedIndexChanged);
             // 
             // lop
             // 
@@ -118,6 +254,7 @@
             this.lop.Size = new System.Drawing.Size(25, 13);
             this.lop.TabIndex = 5;
             this.lop.Text = "Lớp";
+            this.lop.Click += new System.EventHandler(this.lop_Click);
             // 
             // dtp_NgaySinh
             // 
@@ -142,7 +279,7 @@
             // bt_Exit
             // 
             this.bt_Exit.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.bt_Exit.Image = global::QuanLySinhVien_GiaoVien.Properties.Resources.if_Log_Out_27856;
+            this.bt_Exit.Image = global::TNTA.Properties.Resources.if_Log_Out_27856;
             this.bt_Exit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bt_Exit.Location = new System.Drawing.Point(798, 142);
             this.bt_Exit.Name = "bt_Exit";
@@ -151,6 +288,79 @@
             this.bt_Exit.Text = "Thoát  ";
             this.bt_Exit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bt_Exit.UseVisualStyleBackColor = false;
+            // 
+            // bt_delete
+            // 
+            this.bt_delete.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.bt_delete.Enabled = false;
+            this.bt_delete.Image = global::TNTA.Properties.Resources.if_edit_trash_9263;
+            this.bt_delete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bt_delete.Location = new System.Drawing.Point(697, 142);
+            this.bt_delete.Name = "bt_delete";
+            this.bt_delete.Size = new System.Drawing.Size(91, 47);
+            this.bt_delete.TabIndex = 25;
+            this.bt_delete.Text = "Xóa";
+            this.bt_delete.UseVisualStyleBackColor = false;
+            this.bt_delete.Click += new System.EventHandler(this.bt_delete_Click);
+            // 
+            // bt_huy
+            // 
+            this.bt_huy.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.bt_huy.Enabled = false;
+            this.bt_huy.Image = global::TNTA.Properties.Resources.if_Cancel_728918;
+            this.bt_huy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bt_huy.Location = new System.Drawing.Point(798, 79);
+            this.bt_huy.Name = "bt_huy";
+            this.bt_huy.Size = new System.Drawing.Size(75, 45);
+            this.bt_huy.TabIndex = 24;
+            this.bt_huy.Text = "Hủy     ";
+            this.bt_huy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.bt_huy.UseVisualStyleBackColor = false;
+            this.bt_huy.Click += new System.EventHandler(this.bt_huy_Click);
+            // 
+            // bt_Save
+            // 
+            this.bt_Save.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.bt_Save.Enabled = false;
+            this.bt_Save.Image = global::TNTA.Properties.Resources.if_Save_70652;
+            this.bt_Save.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bt_Save.Location = new System.Drawing.Point(697, 79);
+            this.bt_Save.Name = "bt_Save";
+            this.bt_Save.Size = new System.Drawing.Size(91, 45);
+            this.bt_Save.TabIndex = 23;
+            this.bt_Save.Text = "Lưu       ";
+            this.bt_Save.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.bt_Save.UseVisualStyleBackColor = false;
+            this.bt_Save.Click += new System.EventHandler(this.bt_Save_Click);
+            // 
+            // bt_Edit
+            // 
+            this.bt_Edit.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.bt_Edit.Enabled = false;
+            this.bt_Edit.Image = global::TNTA.Properties.Resources.if_edit_validated_85309;
+            this.bt_Edit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bt_Edit.Location = new System.Drawing.Point(798, 18);
+            this.bt_Edit.Name = "bt_Edit";
+            this.bt_Edit.Size = new System.Drawing.Size(75, 48);
+            this.bt_Edit.TabIndex = 22;
+            this.bt_Edit.Text = "Sửa    ";
+            this.bt_Edit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.bt_Edit.UseVisualStyleBackColor = false;
+            this.bt_Edit.Click += new System.EventHandler(this.bt_Edit_Click);
+            // 
+            // bt_ADD
+            // 
+            this.bt_ADD.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.bt_ADD.Image = global::TNTA.Properties.Resources.if_add1__32378__1_;
+            this.bt_ADD.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bt_ADD.Location = new System.Drawing.Point(693, 17);
+            this.bt_ADD.Name = "bt_ADD";
+            this.bt_ADD.Size = new System.Drawing.Size(95, 48);
+            this.bt_ADD.TabIndex = 21;
+            this.bt_ADD.Text = "Thêm Mới";
+            this.bt_ADD.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.bt_ADD.UseVisualStyleBackColor = false;
+            this.bt_ADD.Click += new System.EventHandler(this.bt_ADD_Click);
             // 
             // tx_Email
             // 
@@ -189,6 +399,37 @@
             this.label9.Size = new System.Drawing.Size(86, 16);
             this.label9.TabIndex = 17;
             this.label9.Text = "Số điện thoại";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.panel2.Controls.Add(this.rdb_Nu);
+            this.panel2.Controls.Add(this.rdb_Nam);
+            this.panel2.Location = new System.Drawing.Point(454, 27);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(123, 39);
+            this.panel2.TabIndex = 16;
+            // 
+            // rdb_Nu
+            // 
+            this.rdb_Nu.AutoSize = true;
+            this.rdb_Nu.Location = new System.Drawing.Point(67, 12);
+            this.rdb_Nu.Name = "rdb_Nu";
+            this.rdb_Nu.Size = new System.Drawing.Size(39, 17);
+            this.rdb_Nu.TabIndex = 1;
+            this.rdb_Nu.Text = "Nữ";
+            this.rdb_Nu.UseVisualStyleBackColor = true;
+            // 
+            // rdb_Nam
+            // 
+            this.rdb_Nam.AutoSize = true;
+            this.rdb_Nam.Location = new System.Drawing.Point(3, 12);
+            this.rdb_Nam.Name = "rdb_Nam";
+            this.rdb_Nam.Size = new System.Drawing.Size(47, 17);
+            this.rdb_Nam.TabIndex = 0;
+            this.rdb_Nam.Text = "Nam";
+            this.rdb_Nam.UseVisualStyleBackColor = true;
             // 
             // label8
             // 
@@ -208,6 +449,17 @@
             this.tx_MSV.Name = "tx_MSV";
             this.tx_MSV.Size = new System.Drawing.Size(203, 20);
             this.tx_MSV.TabIndex = 14;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(28, 78);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(86, 16);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "Mã Sinh Viên";
             // 
             // tx_Name
             // 
@@ -230,47 +482,6 @@
             this.label6.TabIndex = 11;
             this.label6.Text = "Họ Và Tên:";
             // 
-            // rdb_Nu
-            // 
-            this.rdb_Nu.AutoSize = true;
-            this.rdb_Nu.Location = new System.Drawing.Point(67, 12);
-            this.rdb_Nu.Name = "rdb_Nu";
-            this.rdb_Nu.Size = new System.Drawing.Size(39, 17);
-            this.rdb_Nu.TabIndex = 1;
-            this.rdb_Nu.Text = "Nữ";
-            this.rdb_Nu.UseVisualStyleBackColor = true;
-            // 
-            // rdb_Nam
-            // 
-            this.rdb_Nam.AutoSize = true;
-            this.rdb_Nam.Location = new System.Drawing.Point(3, 12);
-            this.rdb_Nam.Name = "rdb_Nam";
-            this.rdb_Nam.Size = new System.Drawing.Size(47, 17);
-            this.rdb_Nam.TabIndex = 0;
-            this.rdb_Nam.Text = "Nam";
-            this.rdb_Nam.UseVisualStyleBackColor = true;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.panel2.Controls.Add(this.rdb_Nu);
-            this.panel2.Controls.Add(this.rdb_Nam);
-            this.panel2.Location = new System.Drawing.Point(454, 27);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(123, 39);
-            this.panel2.TabIndex = 16;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(28, 78);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(86, 16);
-            this.label7.TabIndex = 13;
-            this.label7.Text = "Mã Sinh Viên";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -283,235 +494,46 @@
             this.label4.TabIndex = 10;
             this.label4.Text = "Thông Tin Chi Tiết";
             // 
-            // button9
-            // 
-            this.button9.Location = new System.Drawing.Point(832, 10);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(71, 60);
-            this.button9.TabIndex = 57;
-            this.button9.Text = "Làm Mới DS";
-            this.button9.UseVisualStyleBackColor = true;
-            // 
-            // cbKhoa
-            // 
-            this.cbKhoa.FormattingEnabled = true;
-            this.cbKhoa.Location = new System.Drawing.Point(72, 26);
-            this.cbKhoa.Name = "cbKhoa";
-            this.cbKhoa.Size = new System.Drawing.Size(184, 21);
-            this.cbKhoa.TabIndex = 4;
-            // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(273, 24);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(75, 23);
-            this.button8.TabIndex = 2;
-            this.button8.Text = "Tìm kiếm";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 31);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 13);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Chọn Khoa";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.cbKhoa);
-            this.groupBox2.Controls.Add(this.button8);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Location = new System.Drawing.Point(421, 3);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(396, 69);
-            this.groupBox2.TabIndex = 60;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Tìm kiếm theo khoa";
-            // 
-            // btn_TimKiem
-            // 
-            this.btn_TimKiem.Location = new System.Drawing.Point(261, 26);
-            this.btn_TimKiem.Name = "btn_TimKiem";
-            this.btn_TimKiem.Size = new System.Drawing.Size(75, 23);
-            this.btn_TimKiem.TabIndex = 2;
-            this.btn_TimKiem.Text = "Tìm kiếm";
-            this.btn_TimKiem.UseVisualStyleBackColor = true;
-            // 
-            // txb_ChuoiTK
-            // 
-            this.txb_ChuoiTK.Location = new System.Drawing.Point(80, 27);
-            this.txb_ChuoiTK.Name = "txb_ChuoiTK";
-            this.txb_ChuoiTK.Size = new System.Drawing.Size(165, 20);
-            this.txb_ChuoiTK.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(30, 30);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Nhập tên ";
-            // 
-            // panel1
-            // 
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Controls.Add(this.lb_ThongBao);
-            this.panel1.Controls.Add(this.lb_MSVcheck);
-            this.panel1.Controls.Add(this.lb_SDTcheck);
-            this.panel1.Controls.Add(this.cb_lop);
-            this.panel1.Controls.Add(this.lop);
-            this.panel1.Controls.Add(this.dtp_NgaySinh);
-            this.panel1.Controls.Add(this.label11);
-            this.panel1.Controls.Add(this.bt_Exit);
-            this.panel1.Controls.Add(this.bt_delete);
-            this.panel1.Controls.Add(this.bt_huy);
-            this.panel1.Controls.Add(this.bt_Save);
-            this.panel1.Controls.Add(this.bt_Edit);
-            this.panel1.Controls.Add(this.bt_ADD);
-            this.panel1.Controls.Add(this.tx_Email);
-            this.panel1.Controls.Add(this.tx_SĐT);
-            this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.tx_MSV);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.tx_Name);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Location = new System.Drawing.Point(3, 338);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(900, 215);
-            this.panel1.TabIndex = 61;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.btn_TimKiem);
-            this.groupBox1.Controls.Add(this.txb_ChuoiTK);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(3, 3);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(388, 69);
-            this.groupBox1.TabIndex = 59;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Tìm kiếm";
-            // 
-            // dtgvSinhVien
-            // 
-            this.dtgvSinhVien.AllowUserToAddRows = false;
-            this.dtgvSinhVien.AllowUserToDeleteRows = false;
-            this.dtgvSinhVien.AllowUserToOrderColumns = true;
-            this.dtgvSinhVien.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dtgvSinhVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvSinhVien.Location = new System.Drawing.Point(3, 78);
-            this.dtgvSinhVien.Name = "dtgvSinhVien";
-            this.dtgvSinhVien.ReadOnly = true;
-            this.dtgvSinhVien.Size = new System.Drawing.Size(900, 255);
-            this.dtgvSinhVien.TabIndex = 58;
-            // 
-            // bt_delete
-            // 
-            this.bt_delete.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.bt_delete.Enabled = false;
-            this.bt_delete.Image = global::QuanLySinhVien_GiaoVien.Properties.Resources.if_edit_trash_92631;
-            this.bt_delete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bt_delete.Location = new System.Drawing.Point(697, 142);
-            this.bt_delete.Name = "bt_delete";
-            this.bt_delete.Size = new System.Drawing.Size(91, 47);
-            this.bt_delete.TabIndex = 25;
-            this.bt_delete.Text = "Xóa";
-            this.bt_delete.UseVisualStyleBackColor = false;
-            // 
-            // bt_huy
-            // 
-            this.bt_huy.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.bt_huy.Enabled = false;
-            this.bt_huy.Image = global::QuanLySinhVien_GiaoVien.Properties.Resources.if_Cancel_728918;
-            this.bt_huy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bt_huy.Location = new System.Drawing.Point(798, 79);
-            this.bt_huy.Name = "bt_huy";
-            this.bt_huy.Size = new System.Drawing.Size(75, 45);
-            this.bt_huy.TabIndex = 24;
-            this.bt_huy.Text = "Hủy     ";
-            this.bt_huy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.bt_huy.UseVisualStyleBackColor = false;
-            // 
-            // bt_Save
-            // 
-            this.bt_Save.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.bt_Save.Enabled = false;
-            this.bt_Save.Image = global::QuanLySinhVien_GiaoVien.Properties.Resources.if_Save_70652;
-            this.bt_Save.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bt_Save.Location = new System.Drawing.Point(697, 79);
-            this.bt_Save.Name = "bt_Save";
-            this.bt_Save.Size = new System.Drawing.Size(91, 45);
-            this.bt_Save.TabIndex = 23;
-            this.bt_Save.Text = "Lưu       ";
-            this.bt_Save.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.bt_Save.UseVisualStyleBackColor = false;
-            // 
-            // bt_Edit
-            // 
-            this.bt_Edit.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.bt_Edit.Enabled = false;
-            this.bt_Edit.Image = global::QuanLySinhVien_GiaoVien.Properties.Resources.if_edit_validated_85309;
-            this.bt_Edit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bt_Edit.Location = new System.Drawing.Point(798, 18);
-            this.bt_Edit.Name = "bt_Edit";
-            this.bt_Edit.Size = new System.Drawing.Size(75, 48);
-            this.bt_Edit.TabIndex = 22;
-            this.bt_Edit.Text = "Sửa    ";
-            this.bt_Edit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.bt_Edit.UseVisualStyleBackColor = false;
-            // 
-            // bt_ADD
-            // 
-            this.bt_ADD.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.bt_ADD.Image = global::QuanLySinhVien_GiaoVien.Properties.Resources.if_add1__32378__1_;
-            this.bt_ADD.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bt_ADD.Location = new System.Drawing.Point(693, 17);
-            this.bt_ADD.Name = "bt_ADD";
-            this.bt_ADD.Size = new System.Drawing.Size(95, 48);
-            this.bt_ADD.TabIndex = 21;
-            this.bt_ADD.Text = "Thêm Mới";
-            this.bt_ADD.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.bt_ADD.UseVisualStyleBackColor = false;
-            // 
-            // Uc_SinhVien
+            // UC_SinhVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dtgvSinhVien);
-            this.Name = "Uc_SinhVien";
-            this.Size = new System.Drawing.Size(930, 550);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.Name = "UC_SinhVien";
+            this.Size = new System.Drawing.Size(940, 554);
+            this.Load += new System.EventHandler(this.UC_SinhVien_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvSinhVien)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvSinhVien)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lb_ThongBao;
-        private System.Windows.Forms.Label lb_MSVcheck;
-        private System.Windows.Forms.Label lb_SDTcheck;
-        private System.Windows.Forms.ComboBox cb_lop;
-        private System.Windows.Forms.Label lop;
+        private System.Windows.Forms.DataGridView dtgvSinhVien;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button btn_TimKiem;
+        private System.Windows.Forms.TextBox txb_ChuoiTK;
+        private System.Windows.Forms.Label label2;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.ComboBox cbKhoa;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DateTimePicker dtp_NgaySinh;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button bt_Exit;
@@ -524,25 +546,19 @@
         private System.Windows.Forms.TextBox tx_SĐT;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox tx_MSV;
-        private System.Windows.Forms.TextBox tx_Name;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.RadioButton rdb_Nu;
         private System.Windows.Forms.RadioButton rdb_Nam;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox tx_MSV;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox tx_Name;
+        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.ComboBox cbKhoa;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button btn_TimKiem;
-        private System.Windows.Forms.TextBox txb_ChuoiTK;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView dtgvSinhVien;
+        private System.Windows.Forms.ComboBox cb_lop;
+        private System.Windows.Forms.Label lop;
+        private System.Windows.Forms.Label lb_SDTcheck;
+        private System.Windows.Forms.Label lb_MSVcheck;
+        private System.Windows.Forms.Label lb_ThongBao;
     }
 }
